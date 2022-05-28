@@ -1,10 +1,5 @@
-let twoNum = readLine()!
-var reversed: String = ""
+let inputs = readLine()!.split(separator: " ")
+let left: Int = Int(String(inputs[0].reversed()))!
+let right: Int = Int(String(inputs[1].reversed()))!
 
-for num in twoNum.reversed() {
-    reversed += String(num)
-}
-
-let splited = reversed.split(separator: " ").map { Int($0)! }
-
-print(splited.max()!)
+print(left > right ? left : right)
